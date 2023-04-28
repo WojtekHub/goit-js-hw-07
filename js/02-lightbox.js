@@ -12,11 +12,14 @@ const mapImages = galleryItems
   )
   .join("");
 gallery.insertAdjacentHTML("afterbegin", mapImages);
-
+gallery = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: "250",
+});
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
-  let gallery = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: "250",
-  });
+  // let gallery = new SimpleLightbox(".gallery a", {
+  // captionsData: "alt",
+  //captionDelay: "250",
+  //});
 });
